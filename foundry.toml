@@ -1,6 +1,9 @@
 [profile.default]
 src = 'contracts'
 out = 'out'
+optimizer = true
+optimizer_runs = 20
+via_ir = false
 
 fs_permissions = [{ access = "read-write", path = "./"}]
 
