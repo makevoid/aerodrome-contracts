@@ -2,6 +2,25 @@
 
 All contracts for the Protocol, an AMM on EVMs inspired by Solidly.
 
+**Note: This is a fork of the original Aerodrome Protocol repository with additional testing infrastructure.**
+
+## Testing Fork Features
+
+This fork includes additional scripts and test contracts to facilitate testing of the router and other protocol components:
+
+- **Test Tokens**: Deployable ERC20 tokens for testing swaps and liquidity provision
+- **Pool Setup Scripts**: Automated scripts to create test pools with liquidity
+- **Multi-route Testing**: Scripts to set up complex routing scenarios (A → C → B routes)
+- **Anvil Integration**: Pre-configured deployment scripts for local Anvil testing
+
+### Quick Start for Testing
+
+1. Start Anvil: `anvil`
+2. Deploy core contracts: `forge script script/Deploy.s.sol:DeployScript --rpc-url http://localhost:8545 --broadcast`
+3. Setup test tokens and pools: `forge script script/SetupSwap.s.sol:SetupSwap --rpc-url http://localhost:8545 --broadcast`
+
+The setup scripts will create test tokens (TokenA, TokenB, TokenC) and establish pools with liquidity for comprehensive router testing.
+
 See `SPECIFICATION.md` for more detail.
 
 ## Protocol Overview
