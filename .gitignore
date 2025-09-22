@@ -17,3 +17,7 @@ artifacts/
 
 # Coverage
 lcov.info
+
+script/constants/output/
+anvil_deployment.json
+anvil_swap_setup.json
